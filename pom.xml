@@ -15,6 +15,10 @@
         <module>seckill-goods</module>
         <module>seckill-trade</module>
         <module>seckill-activity</module>
+        <module>seckill-eureka-cluster</module>
+        <module>seckill-zuul</module>
+        <module>seckill-common</module>
+        <module>seckill-business</module>
     </modules>
 
     <parent>
@@ -48,6 +52,8 @@
 
         <slf4j.version>1.7.21</slf4j.version>
         <joda-time.version>2.10.6</joda-time.version>
+
+        <dubbo.version>2.7.5</dubbo.version>
     </properties>
 
     <!--
@@ -178,6 +184,25 @@
                 <version>${joda-time.version}</version>
             </dependency>
 
+            <!-- dubbo-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <!--zookeeper注册中心-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies-zookeeper</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>slf4j-log4j12</artifactId>
+                        <groupId>org.slf4j</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
