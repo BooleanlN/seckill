@@ -3,10 +3,13 @@ package cn.whu.user.controller;
 import cn.whu.grace.result.GraceJsonResult;
 import cn.whu.bo.UpdateUserInfoBO;
 import cn.whu.user.UserControllerApi;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+
 
 /**
  * @author snow
@@ -15,6 +18,8 @@ import javax.validation.Valid;
  **/
 @RestController
 public class UserController implements UserControllerApi {
+
+    final static Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @GetMapping("/hello")
     public GraceJsonResult hello(){

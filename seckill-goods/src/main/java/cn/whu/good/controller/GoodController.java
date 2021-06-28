@@ -4,6 +4,8 @@ import cn.whu.bo.GoodBO;
 import cn.whu.bo.StockBO;
 import cn.whu.good.GoodControllerApi;
 import cn.whu.grace.result.GraceJsonResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -15,6 +17,8 @@ import javax.validation.Valid;
  **/
 @RestController
 public class GoodController implements GoodControllerApi {
+
+    final static Logger logger = LoggerFactory.getLogger(GoodController.class);
     /**
      * 扣减库存
      *
