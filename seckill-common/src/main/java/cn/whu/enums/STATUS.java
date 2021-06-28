@@ -41,7 +41,20 @@ public enum STATUS {
     /**
      * 请求超时 > 30 s
      */
-    REQUEST_TIMEOUT(-1003,"请求超时");
+    REQUEST_TIMEOUT(-1003,"请求超时"),
+    /**
+     * 冻结
+     */
+    FROZEN_USER(-1004,"用户账户被冻结，请联系管理员"),
+    /**
+     * 未注册
+     */
+
+    NOT_FOUND_USER(-1005,"未找到该用户，请先注册！"),
+
+    UN_LOGIN(-1006,"未登录，请先登录"),
+
+    TICKET_INVALID(-1007,"会话失效，请重新登录！");
 
     STATUS(Integer value,String message) {
         this.value=value;
@@ -56,4 +69,16 @@ public enum STATUS {
 
     private Integer value;
     private String message;
+
+    public Integer getValue() {
+        return value;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }

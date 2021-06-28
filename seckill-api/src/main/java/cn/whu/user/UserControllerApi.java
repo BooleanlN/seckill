@@ -1,11 +1,15 @@
 package cn.whu.user;
 
+import cn.whu.bo.LoginBO;
 import cn.whu.bo.UpdateUserInfoBO;
 import cn.whu.grace.result.GraceJsonResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 /**
@@ -19,8 +23,13 @@ public interface UserControllerApi {
 
     @ApiOperation(value = "获得用户信息",notes = "获得用户信息",httpMethod = "POST")
     @PostMapping("/getUserInfo")
-    GraceJsonResult getUserInfo(@RequestParam String userId);
+    GraceJsonResult getUserInfo(HttpServletRequest request);
 
     @PostMapping("/updateUserInfo")
     GraceJsonResult updateUserInfo(@RequestBody @Valid UpdateUserInfoBO userInfoBO);
+
+    @ApiOperation(value = "通过email获得用户信息",notes = "通过email获得用户信息",httpMethod = "POST")
+    @PostMapping("/doLogin")
+    GraceJsonResult doLogin(@RequestBody @Valid LoginBO loginBO, BindingResult bindingResult,
+                            HttpServletRequest request, HttpServletResponse response);
 }

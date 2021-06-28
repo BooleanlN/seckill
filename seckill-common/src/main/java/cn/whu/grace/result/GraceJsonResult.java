@@ -60,6 +60,14 @@ public class GraceJsonResult {
         return GraceJsonResult.builder().status(STATUS.INTERNAL_SERVER_ERROR).data(map).build();
     }
 
+    /**
+     * 自定义状态
+     * @param status
+     * @return
+     */
+    public static GraceJsonResult errorCustom(STATUS status){
+        return GraceJsonResult.builder().code(status.getCode()).message(status.getMessage()).build();
+    }
     public Integer getCode() {
         return code;
     }

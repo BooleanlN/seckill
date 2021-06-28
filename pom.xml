@@ -19,6 +19,7 @@
         <module>seckill-zuul</module>
         <module>seckill-common</module>
         <module>seckill-business</module>
+        <module>mybatis-generator-tool</module>
     </modules>
 
     <parent>
