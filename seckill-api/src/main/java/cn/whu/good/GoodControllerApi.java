@@ -5,10 +5,8 @@ import cn.whu.bo.StockBO;
 import cn.whu.grace.result.GraceJsonResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import io.swagger.annotations.ApiParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -34,7 +32,14 @@ public interface GoodControllerApi {
      * @param goodBO
      * @return
      */
-    @ApiOperation(value = "查询库存",httpMethod = "Get")
+    @ApiOperation(value = "查询库存",httpMethod = "GET")
     @GetMapping("/stock")
     GraceJsonResult getStock(@RequestBody @Valid GoodBO goodBO);
+
+    @ApiOperation(value = "获取商品列表",httpMethod = "GET")
+    @GetMapping("/getGoodList")
+    GraceJsonResult queryGoodList(@ApiParam(name = "page", value = "查询下一页的第几页",required = false)
+                                  @RequestParam Integer page,
+                                  @ApiParam(name = "pageSize", value = "分页查询每一页显示的条数", required = false)
+                                  @RequestParam Integer pageSize);
 }

@@ -3,6 +3,7 @@ package cn.whu.user.service.impl;
 import cn.whu.pojo.TUser;
 import cn.whu.user.mapper.TUserMapper;
 import cn.whu.user.service.UserService;
+import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
@@ -12,6 +13,7 @@ import javax.annotation.Resource;
  * @className UserServiceImpl
  * @date 2021/6/28
  **/
+@Service
 public class UserServiceImpl implements UserService {
 
     @Resource

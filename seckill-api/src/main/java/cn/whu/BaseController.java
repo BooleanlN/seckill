@@ -43,6 +43,9 @@ public class BaseController {
     public static final String REDIS_ALREADY_READ = "redis_already_read";
 
     public static final String REDIS_ARTICLE_COMMENT_COUNTS = "redis_article_comment_counts";
+
+    public static final Integer COMMON_START_PAGE = 1;
+    public static final Integer COMMON_PAGE_SIZE = 10;
     /**
      * 获取BO中的错误信息
      * @param result
