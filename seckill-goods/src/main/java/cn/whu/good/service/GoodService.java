@@ -1,5 +1,6 @@
 package cn.whu.good.service;
 
+import cn.whu.bo.GoodBO;
 import cn.whu.pojo.TGood;
 import cn.whu.utils.PagedGridResult;
 
@@ -18,4 +19,10 @@ public interface GoodService {
      * @return
      */
     PagedGridResult queryGoodList(Integer page, Integer pageSize);
+
+    /**
+     * 创建新商品
+     * @param good
+     */
+    void createGood(GoodBO good);
 }

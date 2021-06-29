@@ -68,6 +68,10 @@ public class GraceJsonResult {
     public static GraceJsonResult errorCustom(STATUS status){
         return GraceJsonResult.builder().code(status.getCode()).message(status.getMessage()).build();
     }
+
+    public static GraceJsonResult exception(STATUS status){
+        return GraceJsonResult.builder().code(status.getCode()).message(status.getMessage()).build();
+    }
     public Integer getCode() {
         return code;
     }

@@ -9,6 +9,9 @@ import cn.whu.grace.result.GraceJsonResult;
 import cn.whu.utils.PagedGridResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.context.properties.bind.BindResult;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -40,11 +43,11 @@ public class GoodController extends BaseController implements GoodControllerApi 
     /**
      * 查询当前库存
      *
-     * @param goodBO
+     * @param goodId
      * @return
      */
     @Override
-    public GraceJsonResult getStock(@Valid GoodBO goodBO) {
+    public GraceJsonResult getStock(String goodId) {
         return null;
     }
 
@@ -55,9 +58,18 @@ public class GoodController extends BaseController implements GoodControllerApi 
         }
 
         if (pageSize == null) {
-            page = COMMON_PAGE_SIZE;
+            pageSize = COMMON_PAGE_SIZE;
         }
         PagedGridResult result = goodService.queryGoodList(page, pageSize);
         return GraceJsonResult.ok(result);
+    }
+
+    @Override
+    public GraceJsonResult createGood(@Valid GoodBO goodBO, BindingResult result) {
+        if (result.hasErrors()){
+            return GraceJsonResult.errorMap(getErrors(result));
+        }
+        goodService.createGood(goodBO);
+        return GraceJsonResult.ok();
     }
 }

@@ -54,7 +54,11 @@ public enum STATUS {
 
     UN_LOGIN(-1006,"未登录，请先登录"),
 
-    TICKET_INVALID(-1007,"会话失效，请重新登录！");
+    TICKET_INVALID(-1007,"会话失效，请重新登录！"),
+
+    NULL_POINTER_EXCEPTION(-1008,"空指针错误"),
+
+    GOOD_CREATE_ERROR(-1009,"商品创建失败");
 
     STATUS(Integer value,String message) {
         this.value=value;
