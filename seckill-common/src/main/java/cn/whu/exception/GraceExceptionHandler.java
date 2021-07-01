@@ -2,6 +2,8 @@ package cn.whu.exception;
 
 import cn.whu.enums.STATUS;
 import cn.whu.grace.result.GraceJsonResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -24,9 +26,13 @@ import java.util.Map;
  */
 @ControllerAdvice
 public class GraceExceptionHandler {
+    final static Logger logger = LoggerFactory.getLogger(GraceExceptionHandler.class);
+
+
     @ExceptionHandler(MyCustomException.class)
     @ResponseBody
     public GraceJsonResult returnMyException(MyCustomException e){
+        logger.error("【系统抛出Exception异常】 —— 异常内容如下：{}" , e);
         return GraceJsonResult.exception(e.getStatusEnum());
     }
 
@@ -34,6 +40,7 @@ public class GraceExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseBody
     public GraceJsonResult returnException(MethodArgumentNotValidException e){
+        logger.error("【系统抛出Exception异常】 —— 异常内容如下：{}" , e);
         BindingResult bindingResult = e.getBindingResult();
         Map<String,String> results = getErrors(bindingResult);
         return GraceJsonResult.errorMap(results);
@@ -51,12 +58,13 @@ public class GraceExceptionHandler {
         return map;
     }
 
-//    @ExceptionHandler(NullPointerException.class)
-//    @ResponseBody
-//    public GraceJsonResult returnNullPointerException(NullPointerException e){
-//        String message = e.getMessage();
-//        STATUS exce = STATUS.NULL_POINTER_EXCEPTION;
-//        exce.setMessage(message);
-//        return GraceJsonResult.errorCustom(exce);
-//    }
+    @ExceptionHandler(NullPointerException.class)
+    @ResponseBody
+    public GraceJsonResult returnNullPointerException(NullPointerException e){
+        logger.error("【系统抛出Exception异常】 —— 异常内容如下：{}" , e);
+        String message = e.getMessage();
+        STATUS exce = STATUS.NULL_POINTER_EXCEPTION;
+        exce.setMessage(message);
+        return GraceJsonResult.errorCustom(exce);
+    }
 }

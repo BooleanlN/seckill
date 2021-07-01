@@ -1,0 +1,253 @@
+2021-06-30 01:04:18.753 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=7m27s156ms).
+2021-06-30 01:57:19.960 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=53m1s207ms).
+2021-06-30 09:15:18.539 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=7h17m58s574ms).
+2021-06-30 09:58:05.316 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=42m46s781ms).
+2021-06-30 10:35:08.971 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=37m3s656ms).
+2021-06-30 12:48:14.520 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=26m4s529ms).
+2021-06-30 13:06:17.596 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=17m3s65ms).
+2021-06-30 13:11:21.765 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=5m4s169ms).
+2021-06-30 14:11:50.418 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Retrograde clock change detected (housekeeper delta=27s852ms), soft-evicting connections from pool.
+2021-06-30 20:09:05.658 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-30 20:09:05.662 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Shutdown initiated...
+2021-06-30 20:09:05.668 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Shutdown completed.
+2021-06-30 20:09:05.695 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService
+2021-06-30 20:09:16.966 [main] INFO  cn.whu.good.Application - Starting Application on NINGTLIU-MB0 with PID 81504 (/Users/jiayi/seckill/seckill-goods/target/classes started by jiayi in /Users/jiayi/seckill)
+2021-06-30 20:09:16.969 [main] INFO  cn.whu.good.Application - The following profiles are active: dev
+2021-06-30 20:09:18.013 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-30 20:09:18.016 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-30 20:09:18.054 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2021-06-30 20:09:18.195 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.good]' package. Please check your configuration.
+2021-06-30 20:09:18.724 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2021-06-30 20:09:18.735 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2021-06-30 20:09:18.736 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-06-30 20:09:18.736 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-06-30 20:09:18.822 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-06-30 20:09:18.822 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1796 ms
+2021-06-30 20:09:19.147 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+2021-06-30 20:09:19.953 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-30 20:09:20.068 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-06-30 20:09:20.069 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-06-30 20:09:20.070 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-06-30 20:09:20.070 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-06-30 20:09:20.544 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2021-06-30 20:09:20.559 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-06-30 20:09:20.568 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2021-06-30 20:09:20.748 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2021-06-30 20:09:20.786 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2021-06-30 20:09:20.790 [main] INFO  cn.whu.good.Application - Started Application in 4.59 seconds (JVM running for 5.502)
+2021-06-30 20:09:28.483 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-30 20:09:28.483 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-06-30 20:09:28.491 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2021-06-30 20:10:43.880 [http-nio-8082-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2021-06-30 20:10:45.498 [http-nio-8082-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2021-06-30 20:10:49.232 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-30 20:10:49.233 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Shutdown initiated...
+2021-06-30 20:10:49.238 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Shutdown completed.
+2021-06-30 20:10:49.246 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService
+2021-06-30 20:11:33.317 [main] INFO  cn.whu.good.Application - Starting Application on NINGTLIU-MB0 with PID 81561 (/Users/jiayi/seckill/seckill-goods/target/classes started by jiayi in /Users/jiayi/seckill)
+2021-06-30 20:11:33.320 [main] INFO  cn.whu.good.Application - The following profiles are active: dev
+2021-06-30 20:11:34.118 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-30 20:11:34.120 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-30 20:11:34.144 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2021-06-30 20:11:34.233 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.good]' package. Please check your configuration.
+2021-06-30 20:11:34.738 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2021-06-30 20:11:34.748 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2021-06-30 20:11:34.749 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-06-30 20:11:34.749 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-06-30 20:11:34.838 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-06-30 20:11:34.839 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1459 ms
+2021-06-30 20:11:35.120 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+2021-06-30 20:11:35.841 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-30 20:11:35.922 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-06-30 20:11:35.923 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-06-30 20:11:35.923 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-06-30 20:11:35.923 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-06-30 20:11:36.318 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2021-06-30 20:11:36.332 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-06-30 20:11:36.344 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2021-06-30 20:11:36.527 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2021-06-30 20:11:36.563 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2021-06-30 20:11:36.567 [main] INFO  cn.whu.good.Application - Started Application in 3.804 seconds (JVM running for 4.534)
+2021-06-30 20:13:13.918 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-30 20:13:13.934 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService
+2021-06-30 20:13:20.244 [main] INFO  cn.whu.good.Application - Starting Application on NINGTLIU-MB0 with PID 81630 (/Users/jiayi/seckill/seckill-goods/target/classes started by jiayi in /Users/jiayi/seckill)
+2021-06-30 20:13:20.246 [main] INFO  cn.whu.good.Application - The following profiles are active: dev
+2021-06-30 20:13:21.068 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-30 20:13:21.070 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-30 20:13:21.096 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2021-06-30 20:13:21.182 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.good]' package. Please check your configuration.
+2021-06-30 20:13:21.602 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2021-06-30 20:13:21.611 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2021-06-30 20:13:21.611 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-06-30 20:13:21.611 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-06-30 20:13:21.693 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-06-30 20:13:21.694 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1369 ms
+2021-06-30 20:13:21.909 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+2021-06-30 20:13:22.553 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-30 20:13:22.640 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-06-30 20:13:22.640 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-06-30 20:13:22.641 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-06-30 20:13:22.641 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-06-30 20:13:23.017 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2021-06-30 20:13:23.026 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-06-30 20:13:23.033 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2021-06-30 20:13:23.154 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2021-06-30 20:13:23.180 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2021-06-30 20:13:23.183 [main] INFO  cn.whu.good.Application - Started Application in 3.38 seconds (JVM running for 3.945)
+2021-06-30 20:14:00.243 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-30 20:14:00.250 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService
+2021-06-30 20:14:05.208 [main] INFO  cn.whu.good.Application - Starting Application on NINGTLIU-MB0 with PID 81657 (/Users/jiayi/seckill/seckill-goods/target/classes started by jiayi in /Users/jiayi/seckill)
+2021-06-30 20:14:05.212 [main] INFO  cn.whu.good.Application - The following profiles are active: dev
+2021-06-30 20:14:06.205 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-30 20:14:06.208 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-30 20:14:06.248 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2021-06-30 20:14:06.397 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.good]' package. Please check your configuration.
+2021-06-30 20:14:06.928 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2021-06-30 20:14:06.937 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2021-06-30 20:14:06.938 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-06-30 20:14:06.938 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-06-30 20:14:07.021 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-06-30 20:14:07.021 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1741 ms
+2021-06-30 20:14:07.293 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+2021-06-30 20:14:08.070 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-30 20:14:08.169 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-06-30 20:14:08.169 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-06-30 20:14:08.170 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-06-30 20:14:08.170 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-06-30 20:14:08.630 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2021-06-30 20:14:08.642 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-06-30 20:14:08.651 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2021-06-30 20:14:08.788 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2021-06-30 20:14:08.829 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2021-06-30 20:14:08.833 [main] INFO  cn.whu.good.Application - Started Application in 4.261 seconds (JVM running for 4.994)
+2021-06-30 20:14:12.754 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-30 20:14:12.755 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-06-30 20:14:12.762 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2021-06-30 20:14:12.916 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Starting...
+2021-06-30 20:14:13.157 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Start completed.
+2021-06-30 20:14:28.494 [http-nio-8082-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'stock_consume_count' cannot be null
+### The error may exist in cn/whu/good/mapper/TStockMapper.java (best guess)
+### The error may involve cn.whu.good.mapper.TStockMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO t_stock  ( stock_id,good_id,stock_count,stock_consume_count,create_time,update_time ) VALUES( ?,?,?,?,?,? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'stock_consume_count' cannot be null
+; Column 'stock_consume_count' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'stock_consume_count' cannot be null] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Column 'stock_consume_count' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy144.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy142.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy86.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57)
+	at com.sun.proxy.$Proxy99.insert(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy100.insert(Unknown Source)
+	at cn.whu.good.service.impl.GoodServiceImpl.createGood(GoodServiceImpl.java:90)
+	at cn.whu.good.service.impl.GoodServiceImpl$$FastClassBySpringCGLIB$$9f0c1fc7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at cn.whu.good.service.impl.GoodServiceImpl$$EnhancerBySpringCGLIB$$a2c5896c.createGood(<generated>)
+	at cn.whu.good.controller.GoodController.createGood(GoodController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-06-30 21:24:39.799 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=17m52s746ms).
+2021-06-30 21:46:57.270 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Thread starvation or clock leap detected (housekeeper delta=22m17s472ms).
+2021-06-30 21:48:40.601 [DateSourceHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - DateSourceHikariCP - Retrograde clock change detected (housekeeper delta=29s715ms), soft-evicting connections from pool.
+2021-06-30 21:56:19.445 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-30 21:56:19.447 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Shutdown initiated...
+2021-06-30 21:56:19.454 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - DateSourceHikariCP - Shutdown completed.
+2021-06-30 21:56:19.632 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService

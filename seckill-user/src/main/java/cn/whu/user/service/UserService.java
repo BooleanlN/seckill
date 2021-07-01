@@ -1,5 +1,6 @@
 package cn.whu.user.service;
 
+import cn.whu.bo.UserBO;
 import cn.whu.pojo.TUser;
 
 /**
@@ -14,4 +15,10 @@ public interface UserService {
      * @return
      */
     TUser queryUserByEmail(String email);
+
+    /**
+     * 创建用户
+     * @param userBO
+     */
+    void createUser(UserBO userBO);
 }

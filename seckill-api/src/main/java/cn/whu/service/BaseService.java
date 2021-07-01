@@ -21,6 +21,8 @@ public class BaseService {
 
     public static final String REDIS_ARTICLE_COMMENT_COUNTS = "redis_article_comment_counts";
 
+    public static final String COMMON_ACTIVITY = "NO_ACTIVITY";
+
     @Resource
     public RedisOperator redis;
 

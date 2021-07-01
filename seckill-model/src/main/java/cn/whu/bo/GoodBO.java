@@ -1,6 +1,7 @@
 package cn.whu.bo;
 
 import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -22,6 +23,10 @@ public class GoodBO {
     private BigDecimal goodPrice;
 
     private String goodDesc;
+
+    @NotNull(message = "商品库存不能为空")
+    @Min(0)
+    private Long goodStock;
 
     public String getGoodId() {
         return goodId;
@@ -53,5 +58,13 @@ public class GoodBO {
 
     public void setGoodDesc(String goodDesc) {
         this.goodDesc = goodDesc;
+    }
+
+    public Long getGoodStock() {
+        return goodStock;
+    }
+
+    public void setGoodStock(Long goodStock) {
+        this.goodStock = goodStock;
     }
 }

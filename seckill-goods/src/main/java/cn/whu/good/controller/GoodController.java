@@ -9,9 +9,7 @@ import cn.whu.grace.result.GraceJsonResult;
 import cn.whu.utils.PagedGridResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.context.properties.bind.BindResult;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
