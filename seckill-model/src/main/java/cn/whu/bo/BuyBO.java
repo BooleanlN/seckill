@@ -2,6 +2,7 @@ package cn.whu.bo;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -9,7 +10,7 @@ import java.math.BigDecimal;
  * @className BuyBO
  * @date 2021/6/27
  **/
-public class BuyBO {
+public class BuyBO implements Serializable {
     @NotBlank(message = "用户未登录")
     private String userId;
 

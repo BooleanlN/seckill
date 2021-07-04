@@ -57,6 +57,9 @@ public class RedisOperator {
         redisTemplate.opsForValue().decrement(key);
     }
 
+    public long decrement(String key, Long amount){
+        return redisTemplate.opsForValue().decrement(key, amount);
+    }
 
     public void delKey(String key){
         redisTemplate.delete(key);

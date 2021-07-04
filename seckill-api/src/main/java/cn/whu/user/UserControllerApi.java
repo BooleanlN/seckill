@@ -2,6 +2,7 @@ package cn.whu.user;
 
 import cn.whu.bo.LoginBO;
 import cn.whu.bo.UpdateUserInfoBO;
+import cn.whu.bo.UserBO;
 import cn.whu.grace.result.GraceJsonResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,4 +33,9 @@ public interface UserControllerApi {
     @PostMapping("/doLogin")
     GraceJsonResult doLogin(@RequestBody @Valid LoginBO loginBO, BindingResult bindingResult,
                             HttpServletRequest request, HttpServletResponse response);
+
+    @ApiOperation(value = "创建新用户", notes = "创建新用户", httpMethod = "POST")
+    @PostMapping("/doCreate")
+    GraceJsonResult doCreate(@RequestBody @Valid UserBO userBO, BindingResult bindingResult,
+                             HttpServletRequest request, HttpServletResponse response);
 }

@@ -1,13 +1,14 @@
 package cn.whu.bo;
 
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 /**
  * @author snow
  * @className StockBO
  * @date 2021/6/28
  **/
-public class StockBO {
+public class StockBO implements Serializable {
     @NotBlank(message = "商品Id不为空")
     private String goodId;
     @NotBlank(message = "削减数量不为空")

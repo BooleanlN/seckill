@@ -4,6 +4,7 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -11,7 +12,7 @@ import java.math.BigDecimal;
  * @className GoodBO
  * @date 2021/6/28
  **/
-public class GoodBO {
+public class GoodBO implements Serializable {
 
     private String goodId;
 

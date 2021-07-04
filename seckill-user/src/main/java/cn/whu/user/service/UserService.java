@@ -20,5 +20,13 @@ public interface UserService {
      * 创建用户
      * @param userBO
      */
-    void createUser(UserBO userBO);
+    TUser createUser(UserBO userBO);
+
+    /**
+     * 判断用户是否存在，如果存在返回user信息
+     * @param email
+     * @param nickName
+     * @return
+     */
+    TUser queryUserByEmailAndNickName(String email,String nickName);
 }

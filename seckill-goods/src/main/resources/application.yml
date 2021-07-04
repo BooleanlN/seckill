@@ -7,7 +7,7 @@ spring:
   profiles:
     active: dev # yml中配置文件的环境配置，dev：开发环境，test：测试环境，prod：生产环境
   application:
-    name: user-service
+    name: goods-service
   datasource:
     type: com.zaxxer.hikari.HikariDataSource          # 数据源类型：HikariCP
     driver-class-name: com.mysql.cj.jdbc.Driver          # mysql驱动
@@ -26,3 +26,21 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+############################################################
+#
+# dubbo服务配置
+#
+############################################################
+dubbo:
+  scan:
+    base-packages: cn.whu #  指定 Dubbo 服务实现类的扫描基准包
+  protocol: # 协议配置，协议名称及端口，-1表示自增，从 20880 开始
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost # Dubbo 服务注册中心配置，其中子属性 address 的值 “spring-cloud://localhost”，说明挂载到 Spring Cloud 注册中心

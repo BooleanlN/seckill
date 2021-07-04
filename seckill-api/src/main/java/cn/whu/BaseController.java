@@ -32,7 +32,7 @@ public class BaseController {
 
     public static final String REDIS_USER_TOKEN = "redis_user_token";
     public static final String REDIS_USER_INFO = "redis_user_info";
-    public static final String REDIS_ADMIN_TOKEN = "redis_admin_token";
+    public static final String REDIS_BALANCE_TOKEN = "redis_balance_token";
 
     public static final String REDIS_ALL_CATEGORY = "redis_all_category";
 
@@ -43,6 +43,9 @@ public class BaseController {
     public static final String REDIS_ALREADY_READ = "redis_already_read";
 
     public static final String REDIS_ARTICLE_COMMENT_COUNTS = "redis_article_comment_counts";
+
+    public static final String REDIS_BALANCE_ID_TOKEN = "redis_balance_id_token";
+
 
     public static final Integer COMMON_START_PAGE = 1;
     public static final Integer COMMON_PAGE_SIZE = 10;

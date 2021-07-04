@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
@@ -15,7 +16,7 @@ import java.util.Map;
 @Data
 @Builder
 @ToString
-public class GraceJsonResult {
+public class GraceJsonResult implements Serializable {
     private Integer code;
     private String message;
     private Object data;

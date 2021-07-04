@@ -27,11 +27,11 @@ public class Swagger2Config {
         Predicate<RequestHandler> userPredicate = RequestHandlerSelectors.basePackage("cn.whu.user.controller");
         Predicate<RequestHandler> goodPredicate = RequestHandlerSelectors.basePackage("cn.whu.good.controller");
         Predicate<RequestHandler> tradePredicate = RequestHandlerSelectors.basePackage("cn.whu.trade.controller");
-
+        Predicate<RequestHandler> businessPredicate = RequestHandlerSelectors.basePackage("cn.whu.business.controller");
         return new Docket(DocumentationType.SWAGGER_2)  // 指定api类型为swagger2
                 .apiInfo(apiInfo())                 // 用于定义api文档汇总信息
                 .select()
-                .apis(Predicates.or(userPredicate, goodPredicate,tradePredicate))
+                .apis(Predicates.or(userPredicate, goodPredicate,tradePredicate,businessPredicate))
 //                .apis(Predicates.or(adminPredicate, articlePredicate, userPredicate, filesPredicate))
                 .paths(PathSelectors.any())         // 所有controller
                 .build();

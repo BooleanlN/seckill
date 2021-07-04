@@ -13,5 +13,5 @@ mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-websits:
+website:
   domain-name: trade.boolean.top

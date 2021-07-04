@@ -59,9 +59,19 @@ public enum STATUS {
     NULL_POINTER_EXCEPTION(-1008,"空指针错误"),
 
     GOOD_CREATE_ERROR(-1009,"商品创建失败"),
+
     STOCK_REDUCE_FAIL(-1010,"库存更新失败"),
+
     STOCK_NOT_ENOUGH(-1011,"库存不足"),
-    ORDER_CREATE_FAIL(-1012,"订单创建失败");
+
+    ORDER_CREATE_FAIL(-1012,"订单创建失败"),
+
+    USER_CREATE_FAIL(-1013,"用户创建失败"),
+
+    USER_DUPLICATED_FAIL(-1014,"用户已创建"),
+
+    UPDATE_STORAGE_FAIL(-1015,"删减库存失败"),
+    UPDATE_BALANCE_FAIL(-1016,"更新余额失败");
 
     STATUS(Integer value,String message) {
         this.value=value;

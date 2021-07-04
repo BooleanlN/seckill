@@ -1,0 +1,14 @@
+server:
+  port: 8083
+
+spring:
+  redis:
+    password: zixuedao
+    cluster:
+      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004
+      max-redirects: 3
+
+# 在dev环境开启mybatis的日志打印
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -94,4 +94,16 @@ public class GoodServiceImpl extends BaseService implements GoodService {
             GraceException.display(STATUS.GOOD_CREATE_ERROR);
         }
     }
+
+    /**
+     * 查询商品详情
+     *
+     * @param goodId
+     * @return
+     */
+    @Override
+    public TGood queryGood(Integer goodId) {
+
+        return null;
+    }
 }

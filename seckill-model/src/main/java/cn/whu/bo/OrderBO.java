@@ -2,6 +2,7 @@ package cn.whu.bo;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -9,7 +10,7 @@ import java.math.BigDecimal;
  * @className OrderBO
  * @date 2021/6/30
  **/
-public class OrderBO {
+public class OrderBO implements Serializable {
     private String tradeId;
 
     @NotBlank(message = "用户ID不能为空")

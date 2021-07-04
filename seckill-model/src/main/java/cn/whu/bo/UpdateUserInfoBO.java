@@ -3,19 +3,20 @@ package cn.whu.bo;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.*;
+import java.io.Serializable;
 
 /**
  * @author snow
  * @className UpdateUserInfoBO
  * @date 2021/6/27
  **/
-public class UpdateUserInfoBO {
+public class UpdateUserInfoBO implements Serializable {
     @NotBlank(message="用户ID不能为空")
     private String userId;
 
     @NotBlank(message="用户昵称不能为空")
     @Length(max = 24, message = "用户昵称不能超过24位")
-    private String nickname;
+    private String nikename;
 
     @NotNull(message = "请选择一个性别")
     @Min(value = 0, message = "性别选择不正确")
@@ -34,12 +35,12 @@ public class UpdateUserInfoBO {
         this.userId = userId;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getNikename() {
+        return nikename;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setNikename(String nikename) {
+        this.nikename = nikename;
     }
 
     public Integer getSex() {

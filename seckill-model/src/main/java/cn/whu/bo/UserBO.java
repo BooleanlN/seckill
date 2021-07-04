@@ -3,15 +3,17 @@ package cn.whu.bo;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * @author snow
  * @className UserBO
  * @date 2021/6/30
  **/
-public class UserBO {
+public class UserBO implements Serializable {
+
     @NotBlank(message = "昵称不能为空")
-    private String nickName;
+    private String nikename;
 
     @NotNull(message = "性别不能为空")
     private Integer sex;
@@ -20,12 +22,12 @@ public class UserBO {
     @Email
     private String email;
 
-    public String getNickName() {
-        return nickName;
+    public String getNikename() {
+        return nikename;
     }
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setNikename(String nikename) {
+        this.nikename = nikename;
     }
 
     public Integer getSex() {

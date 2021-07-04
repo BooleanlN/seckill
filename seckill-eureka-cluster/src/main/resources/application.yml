@@ -1,0 +1,54 @@
+############################################################
+#
+# eureka集群注册中心
+# web访问端口号  约定：8101~8103
+#
+############################################################
+server:
+  port: ${port:8101}
+  tomcat:
+    uri-encoding: UTF-8
+    max-swallow-size: -1  # tomcat默认大小2M，超过2M的文件不会被捕获，需要调整此处大小为100MB或者-1即可
+
+############################################################
+#
+# 配置项目信息
+#
+############################################################
+spring:
+  application:
+    name: springcloud-eureka-cluster
+  redis:
+    password: zixuedao
+    cluster:
+      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004
+      max-redirects: 3
+
+############################################################
+#
+# Eureka配置信息
+#
+############################################################
+
+eureka:
+  instance:
+    # 集群中的eureka是唯一的
+    hostname: eureka-cluster-${server.port}
+  other-node-port2: ${p2:8102}
+  other-node-port3: ${p3:8103}
+  client:
+    # 是否要将当前的eureka server注册到自己
+#    register-with-eureka: false # 使用eureka进行注册
+#    # 从当前注册中心进行fetch 列表
+#    fetch-registry: false
+    # 单实例配置自己的服务地址，高可用集群则配置多个地址
+    service-url:
+      defaultZone: http://127.0.0.1:${eureka.other-node-port2}/eureka/,http://127.0.0.1:${eureka.other-node-port3}/eureka/
+    healthcheck:
+      enabled: false
+  server:
+    enable-self-preservation: true # 自我保护功能
+    eviction-interval-timer-in-ms: 5000 # 清理无效节点的时间，可以缩短为5s，默认60s
+
+
+

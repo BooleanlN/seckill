@@ -3,9 +3,13 @@ package cn.whu.good.service.impl;
 import cn.whu.bo.GoodStockBO;
 import cn.whu.enums.STATUS;
 import cn.whu.exception.GraceException;
+import cn.whu.good.mapper.StorageCustomMapper;
 import cn.whu.good.mapper.TStockMapper;
 import cn.whu.good.service.StorageService;
+import cn.whu.grace.result.GraceJsonResult;
 import cn.whu.pojo.TStock;
+import cn.whu.service.BaseService;
+import cn.whu.utils.JsonUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,44 +24,49 @@ import java.util.Date;
  * @date 2021/6/29
  **/
 @Service
-public class StorageServiceImpl implements StorageService {
+public class StorageServiceImpl extends BaseService implements StorageService {
     
     @Resource
     TStockMapper stockMapper;
 
+    @Resource
+    StorageCustomMapper storageCustomMapper;
 
     @Override
     public TStock queryStorage(String goodId) {
-        Example example = new Example(TStock.class);
-        Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("goodId",goodId);
-        TStock stock = stockMapper.selectOneByExample(criteria);
+        String storageKey = REDIS_STORAGE_COUNT + ":" + goodId;
+        String storageLocalKey = LOCAL_STORAGE_COUNT + ":" + goodId;
+        TStock stock = null;
+        if (redis.isKeyExist(storageKey)){
+            String storage = redis.getKey(storageKey);
+            stock = JsonUtils.jsonToPojo(storage, TStock.class);
+
+        } else {
+            Example example = new Example(TStock.class);
+            Example.Criteria criteria = example.createCriteria();
+            criteria.andEqualTo("goodId",goodId);
+            stock = stockMapper.selectOneByExample(example);
+            redis.set(storageKey, JsonUtils.objectToJson(stock));
+        }
         return stock;
     }
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS,rollbackFor = Exception.class)
     public void reduceStorage(GoodStockBO goodStockBO) {
-        Example example = new Example(TStock.class);
-        Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("goodId",goodStockBO.getGoodId());
-        TStock stock = stockMapper.selectOneByExample(example);
-
-        long currentTotal = stock.getStockCount();
-        long currentConsume = stock.getStockConsumeCount();
-        if(currentTotal < goodStockBO.getStockCount()){
-            GraceException.display(STATUS.STOCK_NOT_ENOUGH);
-        }
-        currentTotal -= stock.getStockCount();
-        currentConsume += stock.getStockCount();
-
-        stock.setStockConsumeCount(currentConsume);
-        stock.setStockCount(currentTotal);
-        stock.setUpdateTime(new Date());
-
-        int res = stockMapper.updateByPrimaryKey(stock);
-        if (res != 1){
-            GraceException.display(STATUS.STOCK_REDUCE_FAIL);
+        long consumeCount = goodStockBO.getStockCount();
+        String goodId = goodStockBO.getGoodId();
+        String storageKey = REDIS_STORAGE_COUNT + ":" + goodId;
+        if (redis.isKeyExist(storageKey)) {
+            long result = redis.decrement(storageKey,consumeCount);
+            if (result < 0){
+                GraceException.display(STATUS.UPDATE_STORAGE_FAIL);
+            }
+        } else {
+            int res = storageCustomMapper.decreaseStock(goodId,consumeCount);
+            if (res != 1){
+                GraceException.display(STATUS.UPDATE_STORAGE_FAIL);
+            }
         }
     }
 }

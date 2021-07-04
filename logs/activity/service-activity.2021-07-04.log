@@ -1,0 +1,129 @@
+2021-07-04 17:06:51.194 [main] INFO  o.a.d.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2021-07-04 17:06:51.198 [main] INFO  o.a.d.s.b.c.e.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.8) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.8) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2021-07-04 17:06:51.200 [main] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2021-07-04 17:06:51.536 [pool-1-thread-1] INFO  o.a.d.s.b.c.e.AwaitingNonWebApplicationListener -  [Dubbo] Current Spring Boot Application is await...
+2021-07-04 17:06:51.653 [main] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.name=user-service, dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2021-07-04 17:06:51.670 [main] INFO  cn.whu.activity.Application - The following profiles are active: dev
+2021-07-04 17:06:52.274 [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.activity.mapper]' package. Please check your configuration.
+2021-07-04 17:06:52.368 [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.activity]' package. Please check your configuration.
+2021-07-04 17:06:52.415 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [referenceAnnotationBeanPostProcessor] has been registered.
+2021-07-04 17:06:52.415 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigAliasPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [dubboConfigAliasPostProcessor] has been registered.
+2021-07-04 17:06:52.416 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.context.DubboLifecycleComponentApplicationListener]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [dubboLifecycleComponentApplicationListener] has been registered.
+2021-07-04 17:06:52.417 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.context.DubboBootstrapApplicationListener]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [dubboBootstrapApplicationListener] has been registered.
+2021-07-04 17:06:52.417 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.beans.factory.config.DubboConfigDefaultPropertyValueBeanPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [dubboConfigDefaultPropertyValueBeanPostProcessor] has been registered.
+2021-07-04 17:06:52.491 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-04 17:06:52.493 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-04 17:06:52.514 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2021-07-04 17:06:52.661 [main] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2021-07-04 17:06:52.661 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2021-07-04 17:06:52.732 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.activity]' package. Please check your configuration.
+2021-07-04 17:06:52.734 [main] INFO  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-07-04 17:06:52.808 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7a30e212-e861-31d5-83ba-aa6aa3ff49bd
+2021-07-04 17:06:53.227 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+2021-07-04 17:06:53.235 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2021-07-04 17:06:53.235 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-04 17:06:53.235 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-07-04 17:06:53.314 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-07-04 17:06:53.314 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1627 ms
+2021-07-04 17:06:53.621 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+2021-07-04 17:06:54.098 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-07-04 17:06:54.098 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-07-04 17:06:54.102 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-07-04 17:06:54.102 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-07-04 17:06:54.278 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-04 17:06:54.524 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-07-04 17:06:54.525 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-07-04 17:06:54.525 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-07-04 17:06:54.526 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-07-04 17:06:55.246 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2021-07-04 17:06:55.397 [main] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application hostname="NINGTLIU-MB0" name="user-service" qosEnable="false" />] have been binding by the configuration properties [{name=user-service, qos-enable=false}]
+2021-07-04 17:06:55.508 [main] INFO  o.a.d.c.utils.ConfigValidationUtils -  [DUBBO] There's no valid monitor config found, if you want to open monitor statistics for Dubbo, please make sure your monitor is configured properly., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:06:55.523 [main] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap has been initialized!, dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:06:55.523 [main] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap is starting..., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:06:55.527 [main] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap is ready., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:06:55.527 [main] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap has started., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:06:55.528 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2021-07-04 17:06:55.543 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-07-04 17:06:55.554 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2021-07-04 17:06:55.572 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2021-07-04 17:06:55.609 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+2021-07-04 17:06:55.622 [main] INFO  o.s.c.a.n.r.NacosServiceRegistry - nacos registry, user-service 192.168.1.100:8083 register finished
+2021-07-04 17:06:55.627 [main] INFO  cn.whu.activity.Application - Started Application in 4.803 seconds (JVM running for 5.425)
+2021-07-04 17:07:19.054 [DubboShutdownHook] INFO  o.a.dubbo.config.DubboShutdownHook -  [DUBBO] Run shutdown hook now., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:19.054 [Thread-13] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2021-07-04 17:07:19.054 [Thread-19] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2021-07-04 17:07:19.055 [Thread-19] WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2021-07-04 17:07:19.055 [Thread-13] WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2021-07-04 17:07:19.056 [DubboShutdownHook] INFO  o.a.d.s.b.c.e.AwaitingNonWebApplicationListener -  [Dubbo] Current Spring Boot Application is about to shutdown...
+2021-07-04 17:07:19.056 [DubboShutdownHook] INFO  o.a.d.c.e.l.LoggingEventListener -  [DUBBO] Dubbo Service has been destroyed., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:19.057 [SpringContextShutdownHook] INFO  o.a.d.r.s.AbstractRegistryFactory -  [DUBBO] Close all registries [], dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:19.065 [SpringContextShutdownHook] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap is about to shutdown..., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:19.069 [SpringContextShutdownHook] INFO  o.s.c.a.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2021-07-04 17:07:19.072 [SpringContextShutdownHook] INFO  o.s.c.a.n.r.NacosServiceRegistry - De-registration finished.
+2021-07-04 17:07:19.075 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-07-04 17:07:19.085 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService
+2021-07-04 17:07:19.090 [SpringContextShutdownHook] INFO  o.a.d.c.s.b.f.a.ReferenceAnnotationBeanPostProcessor - class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2021-07-04 17:07:24.405 [main] INFO  o.a.d.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2021-07-04 17:07:24.415 [main] INFO  o.a.d.s.b.c.e.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.8) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.8) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2021-07-04 17:07:24.420 [main] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2021-07-04 17:07:24.835 [pool-1-thread-1] INFO  o.a.d.s.b.c.e.AwaitingNonWebApplicationListener -  [Dubbo] Current Spring Boot Application is await...
+2021-07-04 17:07:24.929 [main] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.name=activity-service, dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2021-07-04 17:07:24.947 [main] INFO  cn.whu.activity.Application - The following profiles are active: dev
+2021-07-04 17:07:25.508 [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.activity.mapper]' package. Please check your configuration.
+2021-07-04 17:07:25.599 [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.activity]' package. Please check your configuration.
+2021-07-04 17:07:25.638 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [referenceAnnotationBeanPostProcessor] has been registered.
+2021-07-04 17:07:25.639 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigAliasPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [dubboConfigAliasPostProcessor] has been registered.
+2021-07-04 17:07:25.640 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.context.DubboLifecycleComponentApplicationListener]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [dubboLifecycleComponentApplicationListener] has been registered.
+2021-07-04 17:07:25.640 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.context.DubboBootstrapApplicationListener]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [dubboBootstrapApplicationListener] has been registered.
+2021-07-04 17:07:25.641 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.config.spring.beans.factory.config.DubboConfigDefaultPropertyValueBeanPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [dubboConfigDefaultPropertyValueBeanPostProcessor] has been registered.
+2021-07-04 17:07:25.701 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-04 17:07:25.703 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-04 17:07:25.720 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5ms. Found 0 Redis repository interfaces.
+2021-07-04 17:07:25.885 [main] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2021-07-04 17:07:25.885 [main] INFO  c.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2021-07-04 17:07:25.947 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[cn.whu.activity]' package. Please check your configuration.
+2021-07-04 17:07:25.950 [main] INFO  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2021-07-04 17:07:26.020 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=7a30e212-e861-31d5-83ba-aa6aa3ff49bd
+2021-07-04 17:07:26.513 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+2021-07-04 17:07:26.521 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2021-07-04 17:07:26.521 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-07-04 17:07:26.521 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-07-04 17:07:26.614 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-07-04 17:07:26.614 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1649 ms
+2021-07-04 17:07:26.911 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+2021-07-04 17:07:27.440 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-07-04 17:07:27.440 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-07-04 17:07:27.443 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-07-04 17:07:27.443 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-07-04 17:07:27.646 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-04 17:07:27.852 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-07-04 17:07:27.853 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-07-04 17:07:27.853 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-07-04 17:07:27.854 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2021-07-04 17:07:28.531 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2021-07-04 17:07:28.656 [main] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application name="activity-service" hostname="NINGTLIU-MB0" qosEnable="false" />] have been binding by the configuration properties [{name=activity-service, qos-enable=false}]
+2021-07-04 17:07:28.780 [main] INFO  o.a.d.c.utils.ConfigValidationUtils -  [DUBBO] There's no valid monitor config found, if you want to open monitor statistics for Dubbo, please make sure your monitor is configured properly., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:28.794 [main] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap has been initialized!, dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:28.795 [main] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap is starting..., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:28.800 [main] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap is ready., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:28.800 [main] INFO  o.a.d.c.bootstrap.DubboBootstrap -  [DUBBO] DubboBootstrap has started., dubbo version: 2.7.8, current host: 192.168.1.100
+2021-07-04 17:07:28.801 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2021-07-04 17:07:28.815 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-07-04 17:07:28.825 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2021-07-04 17:07:28.843 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2021-07-04 17:07:28.880 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+2021-07-04 17:07:28.891 [main] INFO  o.s.c.a.n.r.NacosServiceRegistry - nacos registry, activity-service 192.168.1.100:8083 register finished
+2021-07-04 17:07:28.897 [main] INFO  cn.whu.activity.Application - Started Application in 4.986 seconds (JVM running for 5.755)
+2021-07-04 18:43:29.512 [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-04 18:43:29.513 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-07-04 18:43:29.544 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 31 ms

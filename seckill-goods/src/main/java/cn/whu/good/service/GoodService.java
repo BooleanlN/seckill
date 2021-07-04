@@ -25,4 +25,11 @@ public interface GoodService {
      * @param good
      */
     void createGood(GoodBO good);
+
+    /**
+     * 查询商品详情
+     * @param goodId
+     * @return
+     */
+    TGood queryGood(Integer goodId);
 }

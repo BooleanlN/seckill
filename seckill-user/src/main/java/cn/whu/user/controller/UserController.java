@@ -2,6 +2,8 @@ package cn.whu.user.controller;
 
 import cn.whu.BaseController;
 import cn.whu.bo.LoginBO;
+import cn.whu.bo.UserBO;
+import cn.whu.dubbo.user.UserDubboService;
 import cn.whu.enums.STATUS;
 import cn.whu.enums.UserStatus;
 import cn.whu.grace.result.GraceJsonResult;
@@ -37,6 +39,8 @@ public class UserController extends BaseController implements UserControllerApi 
     @Resource
     UserService userService;
 
+    @Resource
+    UserDubboService userDubboService;
 
     @GetMapping("/hello")
     public GraceJsonResult hello(){
@@ -59,11 +63,14 @@ public class UserController extends BaseController implements UserControllerApi 
     }
 
     @Override
-    public GraceJsonResult doLogin(@Valid LoginBO loginBO, BindingResult bindingResult, HttpServletRequest request, HttpServletResponse response) {
+    public GraceJsonResult doLogin(@Valid LoginBO loginBO, BindingResult bindingResult,
+                                   HttpServletRequest request, HttpServletResponse response) {
+        logger.info(loginBO.getNikename() + "用户登录中");
         if (bindingResult.hasErrors()){
             Map<String, String> errors = getErrors(bindingResult);
             return GraceJsonResult.errorMap(errors);
         }
+
 
         String email = loginBO.getEmail();
 
@@ -82,6 +89,28 @@ public class UserController extends BaseController implements UserControllerApi 
         setCookie(request, response, "uid", user.getUserId(), COOKIE_MONTH);
 
         return GraceJsonResult.ok();
+    }
+
+    @Override
+    public GraceJsonResult doCreate(@Valid UserBO userBO, BindingResult bindingResult,
+                                    HttpServletRequest request, HttpServletResponse response) {
+        logger.info(userBO.getNikename() + "用户创建中");
+        if (bindingResult.hasErrors()){
+            return GraceJsonResult.errorMap(getErrors(bindingResult));
+        }
+        GraceJsonResult result =  userDubboService.addUser(userBO);
+        if (result.getCode() == 200){
+            // 创建成功则登录
+            String uToken = UUID.randomUUID().toString();
+            TUser user = (TUser) result.getData();
+            redisOperator.set(REDIS_USER_TOKEN + ":" + user.getUserId(), uToken);
+            redisOperator.set(REDIS_USER_INFO + ":" + user.getUserId(), JsonUtils.objectToJson(user));
+
+            setCookie(request, response, "utoken", uToken, COOKIE_MONTH);
+            setCookie(request, response, "uid", user.getUserId(), COOKIE_MONTH);
+        }
+
+        return result;
     }
 
 }

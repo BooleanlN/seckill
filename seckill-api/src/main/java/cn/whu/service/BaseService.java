@@ -14,18 +14,23 @@ import java.util.List;
  * @date 2021/6/28
  **/
 public class BaseService {
-    public static final String REDIS_ALL_CATEGORY = "redis_all_category";
-
-    public static final String REDIS_WRITER_FANS_COUNTS = "redis_writer_fans_counts";
-    public static final String REDIS_MY_FOLLOW_COUNTS = "redis_my_follow_counts";
-
-    public static final String REDIS_ARTICLE_COMMENT_COUNTS = "redis_article_comment_counts";
 
     public static final String COMMON_ACTIVITY = "NO_ACTIVITY";
 
+    public static final String REDIS_BALANCE_TOKEN = "redis_balance_token";
+
+    public static final String REDIS_BALANCE_ID_TOKEN = "redis_balance_id_token";
+
+    public static final String REDIS_STORAGE_COUNT = "redis_storage";
+
+    public static final String LOCAL_STORAGE_COUNT = "local_storage";
+
+    public static final String REDIS_HOT_GOOD = "redis_hot_good";
     @Resource
     public RedisOperator redis;
 
+    @Resource
+    public CacheService cacheService;
     /**
      * 设置分页返回参数结果
      * @param list
