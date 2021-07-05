@@ -1,2 +1,4 @@
 .idea
+*.log
 *.iml
+mybatis-generator-tool

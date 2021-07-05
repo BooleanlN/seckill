@@ -10,6 +10,7 @@ import cn.whu.grace.result.GraceJsonResult;
 import cn.whu.pojo.TStock;
 import cn.whu.service.BaseService;
 import cn.whu.utils.JsonUtils;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,6 +32,9 @@ public class StorageServiceImpl extends BaseService implements StorageService {
 
     @Resource
     StorageCustomMapper storageCustomMapper;
+
+    @Resource
+    private RocketMQTemplate rocketMQTemplate;
 
     @Override
     public TStock queryStorage(String goodId) {
@@ -60,7 +64,11 @@ public class StorageServiceImpl extends BaseService implements StorageService {
         if (redis.isKeyExist(storageKey)) {
             long result = redis.decrement(storageKey,consumeCount);
             if (result < 0){
+                // 削减失败，将库存加回去
+                redis.increment(storageKey,consumeCount);
                 GraceException.display(STATUS.UPDATE_STORAGE_FAIL);
+            } else {
+                rocketMQTemplate.convertAndSend();
             }
         } else {
             int res = storageCustomMapper.decreaseStock(goodId,consumeCount);

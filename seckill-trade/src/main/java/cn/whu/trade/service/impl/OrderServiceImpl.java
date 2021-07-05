@@ -4,7 +4,9 @@ import cn.whu.bo.OrderBO;
 import cn.whu.enums.STATUS;
 import cn.whu.exception.GraceException;
 import cn.whu.pojo.TTrade;
+import cn.whu.pojo.TTradeLog;
 import cn.whu.service.BaseService;
+import cn.whu.trade.mapper.TTradeLogMapper;
 import cn.whu.trade.mapper.TTradeMapper;
 import cn.whu.trade.service.OrderService;
 import org.n3r.idworker.Sid;
@@ -28,6 +30,9 @@ public class OrderServiceImpl extends BaseService implements OrderService {
 
     @Resource
     TTradeMapper tradeMapper;
+
+    @Resource
+    TTradeLogMapper logMapper;
     /**
      * 创建订单
      *
@@ -35,7 +40,7 @@ public class OrderServiceImpl extends BaseService implements OrderService {
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public void createOrder(OrderBO orderBO) {
+    public void createOrder(OrderBO orderBO, String transactionId) {
         TTrade trade = new TTrade();
 
         String tradeId = sid.nextShort();
@@ -48,7 +53,21 @@ public class OrderServiceImpl extends BaseService implements OrderService {
         trade.setCreateTime(new Date());
         trade.setUpdateTime(new Date());
 
+        
         int res = tradeMapper.insert(trade);
+        if (res != 1){
+            GraceException.display(STATUS.ORDER_CREATE_FAIL);
+        }
+
+        TTradeLog tTradeLog = new TTradeLog();
+        tTradeLog.setLogId(sid.nextShort());
+        tTradeLog.setOrderId(orderBO.getTradeId());
+        tTradeLog.setTransactionId(transactionId);
+        tTradeLog.setUserId(orderBO.getUserId());
+        tTradeLog.setCreateTime(new Date());
+        tTradeLog.setUpdateTime(new Date());
+
+        res = logMapper.insert(tTradeLog);
         if (res != 1){
             GraceException.display(STATUS.ORDER_CREATE_FAIL);
         }

@@ -2,21 +2,30 @@ package cn.whu.business.controller;
 
 import cn.whu.BaseController;
 import cn.whu.bo.BuyBO;
+import cn.whu.bo.OrderBO;
 import cn.whu.bo.UserBO;
 import cn.whu.business.BusinessControllerApi;
+import cn.whu.business.mq.TransactionProducer;
 import cn.whu.dubbo.user.UserDubboService;
+import cn.whu.enums.STATUS;
 import cn.whu.grace.result.GraceJsonResult;
 import cn.whu.pojo.TUser;
 import cn.whu.utils.JsonUtils;
 import org.apache.dubbo.config.annotation.Reference;
+import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.client.producer.LocalTransactionState;
+import org.apache.rocketmq.client.producer.TransactionSendResult;
+import org.n3r.idworker.Sid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.UUID;
 
 /**
@@ -30,6 +39,12 @@ public class BusinessController extends BaseController implements BusinessContro
 
     @Reference
     UserDubboService userDubboService;
+
+    @Resource
+    TransactionProducer producer;
+
+    @Resource
+    Sid sid;
     /**
      * 购买商品业务入口
      *
@@ -39,9 +54,23 @@ public class BusinessController extends BaseController implements BusinessContro
     @Override
     public GraceJsonResult handleBuy(@Valid BuyBO buyBO) {
         //1. 扣减库存
-
-        //2. 创建订单
-        return GraceJsonResult.ok();
+        OrderBO orderBO = createOrder(buyBO);
+        TransactionSendResult sendResult;
+        try {
+            // 发送事务消息
+            sendResult = producer.send("order", JsonUtils.objectToJson(orderBO),
+                    new HashMap<>());
+        } catch (MQClientException e) {
+            e.printStackTrace();
+            return GraceJsonResult.errorCustom(STATUS.BUY_FAIL);
+        }
+        if(sendResult.getLocalTransactionState() == LocalTransactionState.ROLLBACK_MESSAGE){
+            return GraceJsonResult.errorCustom(STATUS.BUY_FAIL);
+        }else if(sendResult.getLocalTransactionState() == LocalTransactionState.COMMIT_MESSAGE){
+            return GraceJsonResult.ok();
+        }else{
+            return GraceJsonResult.errorCustom(STATUS.BUY_FAIL);
+        }
     }
 
     /**
@@ -71,5 +100,15 @@ public class BusinessController extends BaseController implements BusinessContro
             setCookie(request, response, "uid", user.getUserId(), COOKIE_MONTH);
         }
         return result;
+    }
+    public OrderBO createOrder(BuyBO buyBO){
+        String tradeId = sid.nextShort();
+        OrderBO orderBO = new OrderBO();
+        orderBO.setTradeId(tradeId);
+        orderBO.setGoodCount(buyBO.getGoodCount());
+        orderBO.setMoney(buyBO.getMoney());
+        orderBO.setUserId(buyBO.getUserId());
+        orderBO.setGoodId(buyBO.getGoodId());
+        return orderBO;
     }
 }

@@ -13,5 +13,5 @@ public interface OrderService {
      * 创建订单
      * @param orderBO
      */
-    void createOrder(OrderBO orderBO);
+    void createOrder(OrderBO orderBO, String transactionId);
 }

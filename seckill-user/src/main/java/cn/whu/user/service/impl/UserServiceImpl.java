@@ -38,8 +38,7 @@ public class UserServiceImpl implements UserService {
         Example userExample = new Example(TUser.class);
         Example.Criteria criteria = userExample.createCriteria();
         criteria.andEqualTo("email",email);
-        TUser user = mapper.selectOneByExample(userExample);
-        return user;
+        return mapper.selectOneByExample(userExample);
     }
 
     /**

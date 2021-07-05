@@ -38,9 +38,18 @@ spring:
 ############################################################
 dubbo:
   scan:
-    base-packages: cn.whu #  指定 Dubbo 服务实现类的扫描基准包
+    base-packages: cn.whu.good.dubbo #  指定 Dubbo 服务实现类的扫描基准包
   protocol: # 协议配置，协议名称及端口，-1表示自增，从 20880 开始
     name: dubbo
     port: -1
   registry:
     address: spring-cloud://localhost # Dubbo 服务注册中心配置，其中子属性 address 的值 “spring-cloud://localhost”，说明挂载到 Spring Cloud 注册中心
+############################################################
+#
+# rocketMQ服务配置
+#
+############################################################
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: my-group

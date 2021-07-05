@@ -52,6 +52,9 @@ public class RedisOperator {
         redisTemplate.opsForValue().increment(key);
     }
 
+    public long increment(String key, Long amount){
+        return redisTemplate.opsForValue().increment(key, amount);
+    }
 
     public void decrement(String key){
         redisTemplate.opsForValue().decrement(key);

@@ -71,7 +71,12 @@ public enum STATUS {
     USER_DUPLICATED_FAIL(-1014,"用户已创建"),
 
     UPDATE_STORAGE_FAIL(-1015,"删减库存失败"),
-    UPDATE_BALANCE_FAIL(-1016,"更新余额失败");
+
+    UPDATE_BALANCE_FAIL(-1016,"更新余额失败"),
+
+    NOT_FOUND_TRADE_LOG(-1017,"未查找到对应交易流水"),
+
+    BUY_FAIL(-1018,"购买失败");
 
     STATUS(Integer value,String message) {
         this.value=value;

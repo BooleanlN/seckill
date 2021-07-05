@@ -30,3 +30,12 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+
+dubbo:
+  scan:
+    base-packages: cn.whu.trade.dubbo
+  protocol: # 协议配置，协议名称及端口，-1表示自增，从 20880 开始
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
