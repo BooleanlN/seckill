@@ -60,21 +60,9 @@ public class StorageServiceImpl extends BaseService implements StorageService {
     public void reduceStorage(GoodStockBO goodStockBO) {
         long consumeCount = goodStockBO.getStockCount();
         String goodId = goodStockBO.getGoodId();
-        String storageKey = REDIS_STORAGE_COUNT + ":" + goodId;
-        if (redis.isKeyExist(storageKey)) {
-            long result = redis.decrement(storageKey,consumeCount);
-            if (result < 0){
-                // 削减失败，将库存加回去
-                redis.increment(storageKey,consumeCount);
-                GraceException.display(STATUS.UPDATE_STORAGE_FAIL);
-            } else {
-                rocketMQTemplate.convertAndSend();
-            }
-        } else {
-            int res = storageCustomMapper.decreaseStock(goodId,consumeCount);
-            if (res != 1){
-                GraceException.display(STATUS.UPDATE_STORAGE_FAIL);
-            }
+        int res = storageCustomMapper.decreaseStock(goodId,consumeCount);
+        if (res != 1){
+            GraceException.display(STATUS.UPDATE_STORAGE_FAIL);
         }
     }
 }

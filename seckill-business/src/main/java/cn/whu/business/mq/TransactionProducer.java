@@ -2,6 +2,7 @@ package cn.whu.business.mq;
 
 import io.lettuce.core.TransactionResult;
 import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.client.producer.TransactionListener;
 import org.apache.rocketmq.client.producer.TransactionMQProducer;
 import org.apache.rocketmq.client.producer.TransactionSendResult;
 import org.apache.rocketmq.common.message.Message;
@@ -27,6 +28,8 @@ public class TransactionProducer {
     @Value("${rocketmq.name-server}")
     private String nameSvrAddr;
 
+    @Resource
+    TransactionListener transactionListener;
 
     ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 60,
             TimeUnit.SECONDS, new ArrayBlockingQueue<>(50),Executors.defaultThreadFactory());
@@ -36,6 +39,7 @@ public class TransactionProducer {
         producer.setNamesrvAddr(nameSvrAddr);
         producer.setSendMsgTimeout(Integer.MAX_VALUE);
         producer.setExecutorService(executor);
+        producer.setTransactionListener(transactionListener);
         this.start();
     }
     private void start(){

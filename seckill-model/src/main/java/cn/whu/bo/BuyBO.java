@@ -21,7 +21,7 @@ public class BuyBO implements Serializable {
 
     @NotBlank(message = "商品数量不能为空")
     @Min(value = 1,message = "最少选择一件商品")
-    private Integer goodCount;
+    private Long goodCount;
 
     @NotBlank(message = "商品价格不能为空")
     @Min(value = 0)
@@ -51,11 +51,11 @@ public class BuyBO implements Serializable {
         this.activityId = activityId;
     }
 
-    public Integer getGoodCount() {
+    public Long getGoodCount() {
         return goodCount;
     }
 
-    public void setGoodCount(Integer goodCount) {
+    public void setGoodCount(Long goodCount) {
         this.goodCount = goodCount;
     }
 

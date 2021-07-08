@@ -26,6 +26,8 @@ public class BaseService {
     public static final String LOCAL_STORAGE_COUNT = "local_storage";
 
     public static final String REDIS_HOT_GOOD = "redis_hot_good";
+
+    public static final String REDIS_VERIFY_TOKEN = "redis_VERIFY_TOKEN";
     @Resource
     public RedisOperator redis;
 

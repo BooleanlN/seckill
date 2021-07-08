@@ -36,6 +36,7 @@ public class TradeDubboServiceImpl implements TradeDubboService {
      */
     @Override
     public GraceJsonResult createTrade(OrderBO orderBO,  String transactionId) {
+
         orderService.createOrder(orderBO, transactionId);
         logger.info("订单创建成功");
         return GraceJsonResult.ok(orderBO);
@@ -55,4 +56,6 @@ public class TradeDubboServiceImpl implements TradeDubboService {
         }
         return GraceJsonResult.ok();
     }
+
+
 }

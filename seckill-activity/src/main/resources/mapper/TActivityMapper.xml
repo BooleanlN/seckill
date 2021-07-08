@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.whu.activity.mapper.TActivityMapper" >
+  <resultMap id="BaseResultMap" type="cn.whu.pojo.TActivity" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="activity_id" property="activityId" jdbcType="VARCHAR" />
+    <result column="activity_name" property="activityName" jdbcType="VARCHAR" />
+    <result column="activity_begin_time" property="activityBeginTime" jdbcType="TIMESTAMP" />
+    <result column="activity_end_time" property="activityEndTime" jdbcType="TIMESTAMP" />
+    <result column="activity_reduction" property="activityReduction" jdbcType="DECIMAL" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

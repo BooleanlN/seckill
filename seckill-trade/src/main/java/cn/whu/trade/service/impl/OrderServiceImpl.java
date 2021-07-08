@@ -41,6 +41,14 @@ public class OrderServiceImpl extends BaseService implements OrderService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void createOrder(OrderBO orderBO, String transactionId) {
+        // 1.缓存减库存
+        String storageKey = REDIS_STORAGE_COUNT + ":" + orderBO.getGoodId();
+        long result = redis.decrement(storageKey,orderBO.getGoodCount());
+        if (result < 0){
+            redis.increment(storageKey,orderBO.getGoodCount());
+            GraceException.display(STATUS.UPDATE_STORAGE_FAIL);
+        }
+        // 创建订单
         TTrade trade = new TTrade();
 
         String tradeId = sid.nextShort();

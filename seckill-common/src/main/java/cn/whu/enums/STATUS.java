@@ -76,7 +76,10 @@ public enum STATUS {
 
     NOT_FOUND_TRADE_LOG(-1017,"未查找到对应交易流水"),
 
-    BUY_FAIL(-1018,"购买失败");
+    BUY_FAIL(-1018,"购买失败"),
+    RATELIMIT(-1019,"活动太火爆，请稍后再试"),
+    ACTVITY_NOT_FOUND(-1020,"活动未找到"),
+    ACTVITY_NOT_LAUNCH(-1021,"活动未开启");
 
     STATUS(Integer value,String message) {
         this.value=value;

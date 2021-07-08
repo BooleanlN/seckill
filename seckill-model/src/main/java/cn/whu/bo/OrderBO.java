@@ -22,7 +22,7 @@ public class OrderBO implements Serializable {
     private String goodId;
 
     @NotNull(message = "商品数量为空")
-    private Integer goodCount;
+    private Long goodCount;
 
     @NotNull(message = "订单金额不能为空")
     private BigDecimal money;
@@ -59,11 +59,11 @@ public class OrderBO implements Serializable {
         this.goodId = goodId;
     }
 
-    public Integer getGoodCount() {
+    public Long getGoodCount() {
         return goodCount;
     }
 
-    public void setGoodCount(Integer goodCount) {
+    public void setGoodCount(Long goodCount) {
         this.goodCount = goodCount;
     }
 

@@ -46,7 +46,6 @@ public class BaseController {
 
     public static final String REDIS_BALANCE_ID_TOKEN = "redis_balance_id_token";
 
-
     public static final Integer COMMON_START_PAGE = 1;
     public static final Integer COMMON_PAGE_SIZE = 10;
     /**
